@@ -38,3 +38,4 @@ const navbarItems: NavItem[] = [
 ];
 
 export default navbarItems;
+export const SKELETON_COUNT = 12;

@@ -1,32 +1,19 @@
 import { MovieCardProps } from '@/lib/Types/movies';
 import React from 'react';
-import Image from 'next/image';
 
-/**
- * MovieCard displays a movie poster and info. Clickable for navigation.
- */
-const MovieCard: React.FC<MovieCardProps & { onClick?: () => void }> = ({
+const MovieCard: React.FC<MovieCardProps> = ({
   posterUrl,
   originalTitle,
   originalLanguage,
   popularity,
   releaseDate,
-  onClick,
 }) => {
   return (
-    <div
-      className="relative group w-full max-w-xs overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
-      onClick={onClick}
-      role={onClick ? 'button' : undefined}
-      tabIndex={onClick ? 0 : undefined}
-    >
-      <Image
+    <div className="relative group w-full max-w-xs overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+      <img
         src={posterUrl || '/fallback.jpg'}
         alt={originalTitle}
-        width={300}
-        height={380}
         className="w-full h-[380px] object-cover transition-transform duration-300 group-hover:scale-110"
-        priority={false}
       />
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-100" />

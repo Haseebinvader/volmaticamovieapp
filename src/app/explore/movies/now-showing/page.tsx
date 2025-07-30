@@ -55,7 +55,6 @@ const NowShowingPage = () => {
             originalLanguage={item.original_language}
             popularity={item.popularity}
             releaseDate={item.releaseDate}
-            onClick={() => router.push(`/explore/movies/now-showing/${item.id}`)}
           />
         ))}
       </div>
