@@ -11,7 +11,8 @@ import {
   NavigationMenuLink,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"; 
-import navbarItems, { NavItem } from "@/Data";
+import navbarItems from "@/Data";
+import { NavItem } from "@/lib/Types/navItems";
 
 export default function Header() {
   return (
